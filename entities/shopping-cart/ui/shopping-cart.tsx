@@ -9,21 +9,7 @@ import toast, {Toaster} from "react-hot-toast";
 const ShoppingCart = () => {
     const shoppingCart = useShoppingCart();
     const onResponse = useCallback(async () => {
-        const validationPhone = shoppingCart.phone?.trim().replace(/\D/g, '');
-        if (!validationPhone) {
-            toast.error('Input the phone!', {
-                duration: 4000,
-                position: 'top-right',
-            });
-            return;
-        }
-
-        if (validationPhone.length > 12) {
-            toast.error('Phone should be shorter than 12 symbols!', {
-                duration: 4000,
-                position: 'top-right',
-            });
-            return;
+        const validationPhone = shoppingCart.phone?.trim().replace(/\D/g, '') {
         }
 
         const result = await fetch('/api/order', {

@@ -1,38 +1,32 @@
 У меня эта неделя выдалась загруженной, так что два дня - довольно сжатый срок. Наверное, вечером его никто смотреть не будет, но я немного доработаю то, что уже начал, и добавлю описание по тому, что было сделано.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Классический Next.js проект, с использованием FSD-архитектуры
 
-## Getting Started
+## Требования к заданию
 
-First, run the development server:
+- [x] визуал по фигме
+- [ ] должен быть адаптирован под мобильные устройства и планшеты
+- [x] наполнение контентом отзывов из html обернутого в json
+- [x] наполнение контентом товары по апи
+    - [x] показывать первую страницу сразу
+    - [x] остальные страницы подгружать ajax запросом, по мере прокрутки вниз
+- [ ] при нажатии на кнопку "купить", она должна меняться на кнопки + и - и поле для ввода кол-ва товара, значение поля должно быть 1, кнопки должны добавлять отбавлять товар, так же должна быть возможность вписать в поле для ввода любое кол-во.
+- [x] при изменении кол-ва какого-либо из товаров должна меняться информация в корзине (та что над полем с телефоном)
+- [ ] набранные товары и введенный номер телефона должны сохраняться при перезагрузки страницы
+- [x] маска в поле для телефона
+- [ ] при нажатии кнопки "заказать" идет проверка того что телефон полностью введен
+    - [ ] если всё хорошо - отправлять запрос на сервер
+    - [ ] если есть ошибки - подсветить соответствующие поля красным (поле номера телефона)
+- [ ] после отправки запроса и получения ответа от сервера отобразить попап что всё успешно (сделать попап в стиле самого сайта)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Стек
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js
+- Typescript
+- Redux Toolkit
+- Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Предложения
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Была мысль добавить для отзывов слайдер или кнопку Read More, но времени на это не хватило
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
