@@ -24,12 +24,8 @@ export const productsSlice = createSlice({
             state.pageSet[action.payload.page] = true;
             state.all.push(...action.payload.products);
         },
-        clearProducts: (state) => {
-            state.all = [];
-            state.pageSet = {};
-        },
     },
 });
 
-export const { addProductsFromPage, clearProducts } = productsSlice.actions;
+export const { addProductsFromPage } = productsSlice.actions;
 export default productsSlice.reducer;

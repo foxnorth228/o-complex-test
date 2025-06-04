@@ -1,10 +1,10 @@
-import {useChangePhoneNumber, useShoppingCart} from "@/entities/shopping-cart/model/hooks";
+import {useChangePhoneNumberCart, useShoppingCart} from "@/entities/shopping-cart/model/hooks";
 import 'react-phone-number-input/style.css';
 import PhoneInputLib from 'react-phone-number-input'
 
 const PhoneInput = () => {
     const phone = useShoppingCart().phone;
-    const changePhone = useChangePhoneNumber();
+    const changePhone = useChangePhoneNumberCart();
 
     return (
         <PhoneInputLib

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import shoppingCartReducer from '@/entities/shopping-cart/model/shopping-card-slice';
+import shoppingCartReducer from '@/entities/shopping-cart/model/slice';
 import productsReducer from '@/entities/product/model/slice';
 import {productsApi} from "@/entities/product/model/service";
 

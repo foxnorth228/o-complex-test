@@ -9,7 +9,7 @@ export const shoppingCartSlice = createSlice({
     initialState,
     reducers: {
         changePhone: (state, action: PayloadAction<string>) => { state.phone = action.payload },
-        changeProducts: (state, action: PayloadAction<{ product: IProduct, action: 'inc' | 'dec'}  >) => {
+        changeProductNumber: (state, action: PayloadAction<{ product: IProduct, action: 'inc' | 'dec'}  >) => {
             const existedProductIndex = state.products.findIndex((product) => product.id === action.payload.product.id);
             const productDiff = action.payload.action === 'inc' ? 1 : -1;
             if (existedProductIndex !== -1) {
@@ -26,8 +26,22 @@ export const shoppingCartSlice = createSlice({
                 });
             }
         },
+        setProductNumber: (state, action: PayloadAction<{ id: string | number, newValue: number }>) => {
+            const product = state.products.find((product) => product.id === action.payload.id);
+
+            if (!product) {
+                return;
+            }
+
+            if (action.payload.newValue === 0) {
+                const productIndex = state.products.findIndex((product) => product.id === action.payload.id);
+                state.products.splice(productIndex, 1);
+            } else {
+                product.number = action.payload.newValue;
+            }
+        }
     },
 });
 
-export const { changePhone, changeProducts } = shoppingCartSlice.actions;
+export const { changePhone, changeProductNumber, setProductNumber } = shoppingCartSlice.actions;
 export default shoppingCartSlice.reducer;
