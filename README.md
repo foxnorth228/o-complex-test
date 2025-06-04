@@ -1,3 +1,5 @@
+У меня эта неделя выдалась загруженной, так что два дня - довольно сжатый срок. Наверное, вечером его никто смотреть не будет, но я немного доработаю то, что уже начал, и добавлю описание по тому, что было сделано.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
