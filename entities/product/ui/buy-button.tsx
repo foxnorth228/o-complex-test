@@ -34,8 +34,6 @@ const BuyButton = ({product}: {product: IProduct}) => {
                 onChange={(e) => {
                     const value = Number(e.target.value);
 
-                    console.log(product);
-
                     if (isFinite(value) && /^\d+$/.test(value.toString()) && value >= 0 && value < 10000) {
                         setProductNumber({ id: product.id, newValue: value });
                     }

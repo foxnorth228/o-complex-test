@@ -4,11 +4,9 @@ import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form';
 import {Control, Controller} from "react-hook-form";
 
 // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-const PhoneInput = ({ control }: {control:  Control<{     phone: string }, any, {     phone: string }>}) => {
+const PhoneInput = ({ control }: {control: Control<{ phone: string, products: null }, any, { phone: string,products: null }>}) => {
     const phone = useShoppingCart().phone;
     const changePhone = useChangePhoneNumberCart();
-
-    console.log(phone);
 
     return (
         <Controller

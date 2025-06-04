@@ -13,7 +13,6 @@ const ProductsInfinityScroller = () => {
     const products = useProducts();
 
     const fetchNext = () => {
-        console.log(page);
         if (!isFetching) {
             setPage(page + 1);
         }

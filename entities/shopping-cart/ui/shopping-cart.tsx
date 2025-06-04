@@ -22,7 +22,7 @@ const ShoppingCart = () => {
         if (errors.products && shoppingCart.products.length ) {
             clearErrors("products");
         }
-    }, [clearErrors, shoppingCart.products.length]);
+    }, [clearErrors, errors.products, shoppingCart.products.length]);
 
     const onSubmit = useCallback(async () => {
         if (!shoppingCart.products.length) {
@@ -45,7 +45,7 @@ const ShoppingCart = () => {
         } else if (!data?.success) {
             toast.error(`Произошла ошибка при покупке: ${data?.error}`);
         }
-    }, [clearErrors, setError, shoppingCart]);
+    }, [setError, shoppingCart]);
 
     return (
         <form

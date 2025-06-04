@@ -30,8 +30,6 @@ async function buyProducts(phone: string, products: IShoppingProduct[])  {
         }),
     });
 
-    console.log(url, body, result, phone.length);
-
     return result.json();
 }
 
